@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Stay"+collision.gameObject.name);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag =="Food")
